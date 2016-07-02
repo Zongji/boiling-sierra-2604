@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var json = require('../obj');
 
-var data = {title:"Express"};
+var data = {title:"A Express app written in Node.js on heroku"};
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 //  res.send('respond with a resource');

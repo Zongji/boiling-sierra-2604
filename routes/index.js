@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var data = {
-	title : "node app"
+	title : "A Express app written in Node.js on heroku"
 };
 
 /* GET home page. */
