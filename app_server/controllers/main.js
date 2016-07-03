@@ -1,13 +1,13 @@
 
 var data = {
-			title : "A Express app written in Node.js on heroku"
-		};
+	title : "A Express app written in Node.js on heroku"
+};
+
 module.exports.index = function(req, res, next) {
 	// console.info(data);
 	data.menu = "main";
 	res.render('index', data);
 };
-
 
 module.exports.git = function(req, res, next) {
 	data.menu = "git";

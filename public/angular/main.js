@@ -40,11 +40,10 @@ myApp.controller('IndexController',['$scope','$http',function ($scope, $http) {
             title3:"title 3333"
         }
     ];
-    console.info("size:"+this.list)
     
     $http.get("api/users").success(function (data) {
         index.data = data;
-        console.info(index.data.borough);
+        //console.info(index.data.borough);
     })
     
 }]);
