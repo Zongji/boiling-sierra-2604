@@ -41,7 +41,8 @@ myApp.controller('IndexController',['$scope','$http',function ($scope, $http) {
         }
     ];
     
-    $http.get("api/users").success(function (data) {
+    $http.get("api/songs").success(function (data) {
+        
         index.data = data;
         //console.info(index.data.borough);
     })

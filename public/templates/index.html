@@ -2,11 +2,20 @@
     <div class="col-sm-8">
         length:{{index.data1.length }}
         <pre>{{index.data}}</pre>
-        <table class="table">
-            <tr ng-repeat="item in index.data1">
-                <td>{{ item.title1 }}</td>
-                <td>{{ item.title2 }}</td>
-                <td>{{ item.title3 }}</td>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>decade</th>
+                <th>artist</th>
+                <th>song</th>
+                <th>weeksAtOne</th>
+            </tr>
+            </thead>
+            <tr ng-repeat="item in index.data">
+                <td>{{ item.decade }}</td>
+                <td>{{ item.artist }}</td>
+                <td>{{ item.song }}</td>
+                <td>{{ item.weeksAtOne }}</td>
             </tr>
         </table>
     </div>

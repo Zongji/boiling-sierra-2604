@@ -4,11 +4,15 @@ var json = require('../obj');
 
 var data = {title:"A Express app written in Node.js on heroku"};
 
+var uri = 'mongodb://test:test@ds011725.mlab.com:11725/polar-shore';
+var db = require('mongoskin').db(uri);
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 //  res.send('respond with a resource');
-	data.menu = "user"
+	data.menu = "user";
 	res.json(data);
+
 });
 
 router.get('/users',function(req,res,next){
@@ -32,6 +36,15 @@ router.delete('/:id',function(req,res){
 	
 });
 
+
+router.get('/songs',function(req,res){
+	db.collection('songs').find().toArray(function(err, result) {
+	    if (err) throw err;
+	    // console.log(result);
+	    res.json(result);
+	});
+	//db.close();
+});
 
 
 module.exports = router;
