@@ -46,6 +46,10 @@ myApp.controller('IndexController',['$scope','$http',function ($scope, $http) {
         index.data = data;
         //console.info(index.data.borough);
     })
+
+    index.createNew = function(song){
+        
+    };
     
 }]);
 
