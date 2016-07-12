@@ -26,6 +26,9 @@ module.exports.bookmarks = function(req, res, next) {
 
 
 module.exports.webhook = function(req, res, next){
-	console.info("");
+	console.info("content-type:"+req.get("content-type"));
+	console.info("content-md5:"+req.get("content-md5"));
+	console.info("authorization:"+req.get("authorization"));
+	console.info("=============");
 	res.json(req.headers);
 }
