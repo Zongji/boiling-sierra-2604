@@ -23,3 +23,9 @@ module.exports.bookmarks = function(req, res, next) {
 	data.menu = "bookmarks";
 	res.render('bookmarks', data);
 }
+
+
+module.exports.webhook = function(req, res, next){
+	console.info("");
+	res.json(req.headers);
+}

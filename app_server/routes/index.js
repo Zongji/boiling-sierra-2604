@@ -7,4 +7,6 @@ router.get('/', controller.index);
 router.get('/git', controller.git);
 router.get('/trends', controller.trends);
 router.get('/bookmarks', controller.bookmarks);
+router.post('/webhook',controller.webhook);
+
 module.exports = router;
