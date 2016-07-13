@@ -30,5 +30,8 @@ module.exports.webhook = function(req, res, next){
 	console.info("content-md5:"+req.get("content-md5"));
 	console.info("authorization:"+req.get("authorization"));
 	console.info("=============");
-	res.json(req.headers);
+	var result = {};
+	result.headers = req.headers;
+	result.body = req.body;
+	res.json(result);
 }
