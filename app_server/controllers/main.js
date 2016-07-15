@@ -26,10 +26,10 @@ module.exports.bookmarks = function(req, res, next) {
 
 
 module.exports.webhook = function(req, res, next){
-	console.info("content-type:["+req.get("content-type")+"]\n"
-		+"content-md5:["+req.get("content-md5")+"]\n"
-		+"authorization:"+req.get("authorization")+"]\n"
-		+"Authorization:"+req.get("Authorization")+"]\n"
+	console.info("content-type:["+req.get("content-type")+"] "
+		+"content-md5:["+req.get("content-md5")+"] "
+		+"authorization:"+req.get("authorization")+"] "
+		+"Authorization:"+req.get("Authorization")+"]\n "
 		+ "============================================");
 	var result = {};
 	result.headers = req.headers;
