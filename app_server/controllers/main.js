@@ -26,14 +26,15 @@ module.exports.bookmarks = function(req, res, next) {
 
 
 module.exports.webhook = function(req, res, next){
-	console.info("========>content-type:["+req.get("content-type")+"] "
-		+"content-md5:["+req.get("content-md5")+"] "
-		+"authorization:["+req.get("authorization")+"] "
-		+ "body:[" +JSON.stringify(req.body)+"]"
-		+ "<========="
-	);
+//	console.info("========>content-type:["+req.get("content-type")+"] "
+//		+"content-md5:["+req.get("content-md5")+"] "
+//		+"authorization:["+req.get("authorization")+"] "
+//		+ "body:[" +JSON.stringify(req.body)+"]"
+//		+ "<========="
+//	);
 	var result = {};
 	result.headers = req.headers;
 	result.body = req.body;
+	console.info("========>"+JSON.stringify(result));
 	res.json(result);
 }
